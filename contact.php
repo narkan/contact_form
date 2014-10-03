@@ -33,53 +33,54 @@
 	E: me@me.com
 					</p>
 					
-					<div id="contact-form">
-						
-						<?php
-						//init variables
-						$cf = array();
-						$sr = false;
-			
-						if(isset($_SESSION['cf_returndata'])){
-							$cf = $_SESSION['cf_returndata'];
-							$sr = true;
-							// var_dump ($_SESSION['cf_returndata']);
-						}
-						?>
-						<ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">
-							<li id="info">There were some problems with the form:</li>
+						<div id="contact-form">
+							
 							<?php
-							if(isset($cf['errors']) && count($cf['errors']) > 0) :
-								foreach($cf['errors'] as $error) :
+							//init variables
+							$cf = array();
+							$sr = false;
+				
+							if(isset($_SESSION['cf_returndata'])){
+								$cf = $_SESSION['cf_returndata'];
+								$sr = true;
+								// var_dump ($_SESSION['cf_returndata']);
+							}
 							?>
-							<li><?php echo $error; ?></li>
-							<?php
-								endforeach;
-							endif;
-							?>
-						</ul>
-						<p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for contacting us. We will respond to you shortly.</p>
-						<form method="post" action="process.php">
-							<label for="name">From: <span class="required">*</span></label>
-							<input type="text" id="name" name="name" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['name'] : '' ?>" placeholder="Your name" required autofocus />
-			
-							<label for="email">Email: <span class="required">*</span></label>
-			                <input type="email" id="email" name="email" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['email'] : '' ?>" placeholder="Your email address" required />
-			
-			                <label for="telephone">Telephone: </label>
-			                <input type="tel" id="telephone" name="telephone" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['telephone'] : '' ?>" />
-			
-			                <label for="message">Message: <span class="required">*</span></label>
-			                <textarea id="message" name="message" placeholder="Your message" required data-minlength="6"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
-			
-			                <span id="loading"></span>
-			                <input type="submit" value="Send" id="submit-button" />
-			                <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
-			            </form>
-			            <?php unset($_SESSION['cf_returndata']); ?>
-			        </div>
-					
-				</div><!-- /.col-sm-12  CONTENT-->
+							
+							<ul id="errors" class="<?php echo ($sr && !$cf['form_ok']) ? 'visible' : ''; ?>">
+								<li id="info">There were some problems with the form:</li>
+								<?php
+								if(isset($cf['errors']) && count($cf['errors']) > 0) :
+									foreach($cf['errors'] as $error) :
+								?>
+								<li><?php echo $error; ?></li>
+								<?php
+									endforeach;
+								endif;
+								?>
+							</ul>
+							<p id="success" class="<?php echo ($sr && $cf['form_ok']) ? 'visible' : ''; ?>">Thanks for contacting us. We will respond to you shortly.</p>
+							<form method="post" action="process.php">
+								<label for="name">From: <span class="required">*</span></label>
+								<input type="text" id="name" name="name" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['name'] : '' ?>" placeholder="Your name" required autofocus />
+				
+								<label for="email">Email: <span class="required">*</span></label>
+				                <input type="email" id="email" name="email" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['email'] : '' ?>" placeholder="Your email address" required />
+				
+				                <label for="telephone">Telephone: </label>
+				                <input type="tel" id="telephone" name="telephone" value="<?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['telephone'] : '' ?>" placeholder="Your telephone number"  />
+				
+				                <label for="message">Message: <span class="required">*</span></label>
+				                <textarea id="message" name="message" placeholder="Your message" required data-minlength="6"><?php echo ($sr && !$cf['form_ok']) ? $cf['posted_form_data']['message'] : '' ?></textarea>
+				
+				                <span id="loading"></span><br />
+				                <button type="submit" id="submit-button" class="btn btn-primary" value="Send">Send</button>
+				                <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+				            </form>
+				            <?php unset($_SESSION['cf_returndata']); ?>
+				        </div>
+
+					</div><!-- /.col-sm-12  CONTENT-->
 	      		</div><!-- /.row whole width-->
 		</div><!-- /.container -->
     
