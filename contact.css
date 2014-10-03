@@ -1,42 +1,18 @@
-
-#contact-form {
-	background-color: rgba(242, 236, 213, 0.4);
-	width:300px;
-	padding:20px 30px 20px 20px;
-	margin: 20px auto;
-	border: 1px solid #e9e7dc;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:4px;
-
-	position:relative;
-}
+/*  Contact form styling
+================================================== */
 
 
-
-#contact-form h1 {
-	font-size:20px;
-}
-
-#contact-form h2 {
-	margin-bottom:15px;
-	font-family: 'Lobster', cursive;
-	font-size: 14px;
-	line-height: 19px;
-}
 
 #contact-form input,
 #contact-form select,
 #contact-form textarea,
 #contact-form label {
-	font-size:14px;
-	margin-bottom:2px;
+	width: 100%;
 }
 
 #contact-form input,
 #contact-form select,
 #contact-form textarea {
-	width:450px;
 	border: 1px solid #e9e7dc;
 	margin-bottom:20px;
 	padding:4px;
@@ -46,12 +22,10 @@
 #contact-form select:focus,
 #contact-form textarea:focus {
 	border: 1px solid #e9e7dc;
-	background-color: #EBF2F4;
 }
 
 #contact-form textarea {
-	height:150px;
-	resize: none;
+	resize:both;
 }
 
 #contact-form label {
@@ -60,61 +34,29 @@
 
 #contact-form .required {
 	font-weight:bold;
-	color:#F00;
 }
 
 #contact-form #telephone {
-	width: 100%;
 }
 
 #contact-form #submit-button {
-	width: 100px;
-	background-color:#333;
-	color:#FFF;
-	border:none;
-	display:block;
-	float:right;
-	margin-bottom:0px;
-	margin-right:6px;
-	background-color:#8FB5C1;
-	-moz-border-radius:8px;
-	font-family: 'Lobster', cursive;
 }
 
 #contact-form #submit-button:hover {
-	background-color: #A6CFDD;
 }
 
 #contact-form #submit-button:active {
-	position:relative;
-	top:1px;
-}
-
-#contact-form #loading {
-	width:32px;
-	height:32px;
-	background-image:url(../images/loading.gif);
-	display:block;
-	position:absolute;
-	right:130px;
-	bottom:16px;
-	display:none;
 }
 
 #errors {
 	border:solid 1px #E58E8E;
-	padding:10px;
-	margin:25px 0px;
+
 	display:block;
-	width:100%;
-	-webkit-border-radius:8px;
-	-moz-border-radius:8px;
-	border-radius:8px;
+
 	display:none;
 }
 
 #errors li {
-	padding:2px;
 	list-style:none;
 	diplay: block;
 }
@@ -135,10 +77,7 @@
 	padding:25px 10px;
 	margin:25px 0px;
 	display:block;
-	width:100%;
-	-webkit-border-radius:8px;
-	-moz-border-radius:8px;
-	border-radius:8px;
+
 	font-weight:bold;
 	display:none;
 }
@@ -148,33 +87,14 @@
 }
 
 #req-field-desc {
-	font-style:italic;
 }
 
 /* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
 input:required, textarea:required {
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
-	-o-box-shadow:none;
-	box-shadow:none;
 }
 
-/* Normalize placeholder styles */
 
-/* chrome, safari */
-::-webkit-input-placeholder {
-	color:#CCC;
-	font-style:italic;
-}
 
-/* mozilla */
-input:-moz-placeholder, textarea:-moz-placeholder {
-	color:#CCC;
-	font-style:italic;
-}
 
-/* ie (faux placeholder) */
-input.placeholder-text, textarea.placeholder-text  {
-	color:#CCC;
-	font-style:italic;
-}
+/*  end of contact form styling
+================================================== */
