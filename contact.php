@@ -11,8 +11,8 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<title>Contact</title>
-		 
-		<link rel="icon" href="img/favicon.ico">
+		
+		<link href="contact.css" rel="stylesheet"> 
 	</head>
 	
 	<body>
