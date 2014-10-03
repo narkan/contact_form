@@ -99,7 +99,7 @@
 	
 		<!-- SCRIPTS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="js/contact.js"></script>
+		<script src="contact.js"></script>
 		
 		<script>	
 			/*** FOOTER year ***/
